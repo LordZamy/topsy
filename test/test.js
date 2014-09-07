@@ -17,6 +17,11 @@ rl.question('Please enter a Topsy API key.\n', function(answer) {
 
 	topsy.get('content/tweets', {q: 'obama', mintime: '1370217600', maxtime: '1370893329', include_metrics: '1'}, function(err, data) {
 		if(err) throw err;
-		console.log(data.results);
+		console.log(data);
+	});
+
+	topsy.get('content/bulktweets', {q: 'obama'}, function(err, data) {
+		if(err) throw err;
+		console.log(data);
 	});
 });
