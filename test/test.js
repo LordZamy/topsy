@@ -24,4 +24,9 @@ rl.question('Please enter a Topsy API key.\n', function(answer) {
 		if(err) throw err;
 		console.log(data);
 	});
+
+	topsy.get('content/streaming', {q: 'obama'}, function(err, data) {
+		if(err) throw err;
+		console.log(data);
+	});
 });
