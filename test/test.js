@@ -29,4 +29,9 @@ rl.question('Please enter a Topsy API key.\n', function(answer) {
 		if(err) throw err;
 		console.log(data);
 	});
+
+	topsy.get('content/links', {q: 'obama', mintime: '1370217600', maxtime: '1370893329'}, function(err, data) {
+		if(err) throw err;
+		console.log(data);
+	});
 });
